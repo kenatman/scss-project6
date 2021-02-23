@@ -11,3 +11,73 @@ body {
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin-top: 60px;
 }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  width: 100%;
+  padding: 0 5%;
+  h1 {
+    place-self: center center;
+    font-family: "Yrsa";
+  }
+  > span {
+    justify-self: end;
+  }
+  nav {
+    ul {
+      display: flex;
+      font-family: "Montserrat", sans-serif;
+      li:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+  .logo {
+    font-size: 50px;
+    font-weight: 500;
+    display: flex;
+    div {
+      transform: rotateZ(-15deg);
+      margin: 0 -2px;
+    }
+  }
+}
+
+.zero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: calc(100vh - 60px);
+  .zero__image {
+    background-image: url("https://source.unsplash.com/random");
+    background-size: cover;
+    background-position: center center;
+  }
+  .zero__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-family: "Yrsa";
+      font-size: 50px;
+      text-align: center;
+      width: 70%;
+      font-weight: 500;
+      margin-bottom: 40px;
+    }
+    span {
+      font-size: 12px;
+    }
+  }
+}
+
+a {
+  font-weight: 600;
+  color: $orange;
+}
